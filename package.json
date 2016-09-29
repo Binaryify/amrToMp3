@@ -1,13 +1,13 @@
 {
   "name": "amrToMp3",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "build/app.js",
   "scripts": {
     "test": "node ./test/test",
     "build": "babel app.js -d build/"
   },
-  "keywords": [],
+  "keywords": ["amr","amr to mp3","wechat amr"],
   "author": "traveller",
   "license": "MIT",
   "dependencies": {
