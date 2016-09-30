@@ -17,7 +17,7 @@ function amrToMp3(filepath, outputDir = './src/mp3') {
         console.log('error:' + stderr)
         reject('error:' + stderr)
       } else {
-        resolve()
+        resolve(`${outputDir}/${filename}.mp3`)
         console.log(`transform to mp3 success!  ${filepath}->${outputDir}/${filename}.mp3`)
       }
     })

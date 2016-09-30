@@ -10,10 +10,11 @@ $ npm install ffmpeg-static
 ## usage
 js
 ```js
-const amrToMp3 = require('../app')
+var amrToMp3 = require('../app')
 amrToMp3('src/amr/1.amr')
-  .then(function () {
-    // console.log('success!') //业务代码
+  .then(function (data) {
+    console.log(data)  // ./src/mp3/test.mp3
+    //...业务代码
   })
   .catch(function (err) {
     console.log(err)
@@ -29,12 +30,12 @@ amrToMp3('src/amr/1.amr')
 
 ## test
 ```
-npm test
+$ npm test
 ```
 
 ## build
 ```
-npm run build
+$ npm run build
 ```
 
 
