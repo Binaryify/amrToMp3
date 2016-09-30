@@ -6,6 +6,10 @@ This module is installed via npm:
 ```
 $ npm install ffmpeg-static
 ```
+## api
+```js
+amrToMp3(sourcePath[,outputPath])  //outputPath default:./src/mp3/
+```
 
 ## usage
 js
