@@ -1,6 +1,12 @@
 # amrToMp3
 微信amr音频转mp3模块
-
+<p>
+<a href="https://www.npmjs.com/package/amrToMp3"><img src="https://img.shields.io/npm/v/amrToMp3.svg" alt="Version"></a>
+<a href="https://www.npmjs.com/package/amrToMp3"><img src="https://img.shields.io/npm/l/amrToMp3.svg" alt="License"></a>
+<a href="https://www.npmjs.com/package/amrToMp3"><img src="https://img.shields.io/david/dev/binaryify/amrToMp3.svg" alt="devDependencies" ></a>
+<a href="https://www.npmjs.com/package/amrToMp3"><img src="https://img.shields.io/david/binaryify/amrToMp3.svg" alt="devDependencies" ></a>
+<a href="https://travis-ci.org/Binaryify/amrToMp3"><img src="https://api.travis-ci.org/Binaryify/amrToMp3.svg?branch=master" /></a>
+</p>
 ## Installation
 This module is installed via npm:
 ```
