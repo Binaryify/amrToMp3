@@ -22,8 +22,8 @@ amrToMp3(sourcePath[,outputPath])  //outputPath default:./src/mp3/
 ## usage
 js
 ```js
-var amrToMp3 = require('../app')
-amrToMp3('src/amr/1.amr')
+var amrToMp3 = require('amrToMp3')
+amrToMp3('src/amr/test.amr')
   .then(function (data) {
     console.log(data)  // ./src/mp3/test.mp3
     //...业务代码
