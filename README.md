@@ -12,7 +12,7 @@
 ## Installation
 This module is installed via npm:
 ```
-$ npm install ffmpeg-static
+$ npm install amrToMp3
 ```
 ## api
 ```js
