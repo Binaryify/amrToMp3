@@ -9,10 +9,12 @@ function amrToMp3(filepath) {
 
   return new Promise(function (resolve, reject) {
     var basename = path.basename(filepath);
-    var filename = basename.split('.')[0];
-    var etc = basename.split('.')[1];
+    // http://xmqvip.oss-cn-hangzhou.aliyuncs.com/other/images/2018/12/11/1544497148360.1526463056869.amr
+    var etc = basename.split('.').pop();
+    var filename = basename.replace('.' + etc, '');
     if (etc != 'amr') {
       console.log('please input a amr file');
+      reject('please input a amr file');
       return;
     }
     var cmdStr = ffmpegPath + ' -y -i ' + filepath + ' ' + outputDir + '/' + filename + '.mp3';
