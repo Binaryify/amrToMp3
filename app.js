@@ -5,10 +5,12 @@ const ffmpegPath = ffmpeg.path
 function amrToMp3(filepath, outputDir = './src/mp3') {
   return new Promise((resolve, reject) => {
     const basename = path.basename(filepath)
-    const filename = basename.split('.')[0]
-    const etc = basename.split('.')[1]
+    // http://xmqvip.oss-cn-hangzhou.aliyuncs.com/other/images/2018/12/11/1544497148360.1526463056869.amr
+    const etc = basename.split('.').pop()
+    const filename = basename.replace('.' + etc, '')
     if (etc != 'amr') {
       console.log('please input a amr file')
+      reject('please input a amr file')
       return
     }
     const cmdStr = `${ffmpegPath} -y -i ${filepath} ${outputDir}/${filename}.mp3`
