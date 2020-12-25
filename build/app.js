@@ -17,16 +17,15 @@ function amrToMp3(filepath) {
 
         if (ext.toLocaleLowerCase() != '.amr') {
             console.log('please input a amr file');
-            reject('please input a amr file');
+            reject(new Error('please input a amr file'));
             return;
         }
         var _outputName = outputName || filename;
         var cmdStr = ffmpegPath + ' -y -i "' + path.normalize(filepath) + '" -acodec libmp3lame -ar 24000 -vol 500 -ab 128 "' + path.join(outputDir, _outputName + '.mp3') + '"';
-        console.log('cmdStr', cmdStr);
         exec(cmdStr, function (err, stdout, stderr) {
             if (err) {
                 // console.log('error:' + stderr);
-                reject('error:' + stderr);
+                reject(new Error('error:' + stderr));
             } else {
                 resolve(outputDir + '/' + _outputName + '.mp3');
                 // console.log(`transform to mp3 success!  ${path.normalize(filepath)}->${path.join(outputDir, _outputName + '.mp3')}`);
