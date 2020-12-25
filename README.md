@@ -1,5 +1,5 @@
 # amrToMp3
-amr to mp3 nodeJS module  
+amr to mp3 nodeJS module
 
 amr音频转mp3模块
 
@@ -18,7 +18,7 @@ $ npm install amrToMp3
 ```
 ## api
 ```js
-amrToMp3(sourcePath[,outputPath])  //outputPath default:./src/mp3/
+amrToMp3(sourcePath[,outputPath, outputName])  //outputPath default:./src/mp3/
 ```
 
 ## usage
@@ -51,6 +51,3 @@ $ npm test
 ```
 $ npm run build
 ```
-
-
-
