@@ -7,8 +7,8 @@ function amrToMp3(filepath, outputDir = './src/mp3', outputName) {
         const { ext, name: filename } = path.parse(filepath);
         // http://xmqvip.oss-cn-hangzhou.aliyuncs.com/other/images/2018/12/11/1544497148360.1526463056869.amr
         if (ext.toLocaleLowerCase() != '.amr') {
-            console.log('please input a amr file');
-            reject(new Error('please input a amr file'));
+            console.log(`${filepath} is not a .amr file`);
+            reject(new Error(`${filepath} is not a .amr file`));
             return;
         }
         const _outputName = outputName || filename;
