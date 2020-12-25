@@ -24,15 +24,21 @@ amrToMp3(sourcePath[,outputPath, outputName])  //outputPath default:./src/mp3/
 ## usage
 js
 ```js
-var amrToMp3 = require('amrToMp3')
+const amrToMp3 = require('amrToMp3')
 amrToMp3('src/amr/test.amr')
   .then(function (data) {
     console.log(data)  // ./src/mp3/test.mp3
-    //...业务代码
+    //...some code
   })
   .catch(function (err) {
     console.log(err)
   })
+```
+or
+```js
+const amrToMp3 = require('amrToMp3')
+const data = await amrToMp3('src/amr/test.amr') // ./src/mp3/test.mp3
+console.log(data)
 ```
 
 ## support
