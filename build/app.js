@@ -16,8 +16,8 @@ function amrToMp3(filepath) {
 
 
         if (ext.toLocaleLowerCase() != '.amr') {
-            console.log('please input a amr file');
-            reject(new Error('please input a amr file'));
+            console.log(filepath + ' is not a .amr file');
+            reject(new Error(filepath + ' is not a .amr file'));
             return;
         }
         var _outputName = outputName || filename;
