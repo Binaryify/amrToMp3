@@ -8,7 +8,7 @@ function amrToMp3(filepath, outputDir = './src/mp3', outputName) {
         // http://xmqvip.oss-cn-hangzhou.aliyuncs.com/other/images/2018/12/11/1544497148360.1526463056869.amr
         if (ext.toLocaleLowerCase() != '.amr') {
             console.log('please input a amr file');
-            reject('please input a amr file');
+            reject(new Error('please input a amr file'));
             return;
         }
         const _outputName = outputName || filename;
@@ -16,7 +16,7 @@ function amrToMp3(filepath, outputDir = './src/mp3', outputName) {
         exec(cmdStr, (err, stdout, stderr) => {
             if (err) {
                 // console.log('error:' + stderr);
-                reject('error:' + stderr);
+                reject(new Error('error:' + stderr));
             } else {
                 resolve(`${outputDir}/${_outputName}.mp3`);
                 // console.log(`transform to mp3 success!  ${path.normalize(filepath)}->${path.join(outputDir, _outputName + '.mp3')}`);
